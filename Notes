@@ -1,0 +1,18 @@
+Sources I used: https://blog.paperspace.com/getting-started-with-openai-gym/
+
+Even though I am referring from existing projects done by others, I can do many things differently, to add uniqueness to my project, such as: 
+1. If its an environment of Cartpole , i can penalize the agent for making large ovements with cart.
+2. Use different RL algorithms, and track differences in performance of each.
+
+My notes: 
+
+Env class is the fundamental building block of OpenAI gym. Python class which simulates the environment where you want to train the AI agent in.
+
+Env has 2 main attributes: observation_space( which defines structure and legitimate values for 
+observation of environment state), and action_space, which describes the numerical structure of 
+legitimate actions that can be applied to the environment.
+
+From the source code , from the article referred above:
+We see that both the observation space as well as the action space are represented by classes called Box and Discrete, respectively. 
+These are one of the various data structures provided by gym in order to implement observation and action spaces for different kind of scenarios (discrete action space, continuous action space, etc). 
+
