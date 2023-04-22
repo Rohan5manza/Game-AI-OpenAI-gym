@@ -1,7 +1,9 @@
 Sources I used: https://blog.paperspace.com/getting-started-with-openai-gym/
+Sentdex Youtube video on : Reinforcement Learning with Stable Baselines 3 - Introduction (P.1)
+Although I used many sources as reference, including chatgpt for help, I had to personally solve many errors, go through tedious installation of dependencies, etc.
 
 Even though I am referring from existing projects done by others, I can do many things differently, to add uniqueness to my project, such as: 
-1. If its an environment of Cartpole , i can penalize the agent for making large ovements with cart.
+1. If its an environment of Cartpole , i can penalize the agent for making large movements with cart.
 2. Use different RL algorithms, and track differences in performance of each.
 
 Important note: RL is significantly different than traditional ML and neural networks that I am familiar with till now. Here, RL does not explicitly map 
@@ -42,4 +44,10 @@ reward: floating point number indicating reward received in current time step
 done: boolean indicating whether episode is over or not
 info: dictionary that keeps diagonistic information about the environment.
 
+
+Try Stable Baseline3 as well.
+
+I used 2 methods for cartpole simulation:
+1. default env.step(action), or setting some seed, to randomize behaviour at each time step
+2. Q-learning, which maintains a table of values thart it updates after every time step.
 
