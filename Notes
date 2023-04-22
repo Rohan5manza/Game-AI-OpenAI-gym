@@ -4,6 +4,10 @@ Even though I am referring from existing projects done by others, I can do many 
 1. If its an environment of Cartpole , i can penalize the agent for making large ovements with cart.
 2. Use different RL algorithms, and track differences in performance of each.
 
+Important note: RL is significantly different than traditional ML and neural networks that I am familiar with till now. Here, RL does not explicitly map 
+relationships between state, rewards, and actions, whereas ML does. 
+IN OTHER WORDS, RL INVOLVES THE AI AGENT LEARNING VIA EXPERIENCE, WHEREAS NEURAL- NETWORRK BASED APPROACHES RELY ON FUNCTION APPROXIMATION.
+
 My notes: 
 
 Env class is the fundamental building block of OpenAI gym. Python class which simulates the environment where you want to train the AI agent in.
@@ -25,8 +29,17 @@ reward: The reward that you can get from the environment after executing the act
 done: Whether the episode has been terminated. If true, you may need to end the simulation or reset the environment to restart the episode.
 info: This provides additional information depending on the environment, such as number of lives left, or general information that may be conducive in debugging.
 
-In many cases, the observation is a screenshot of the game. To see how environment looks in
-cuurent state, use render method.
-env.render(mode="human)
+In many cases, the observation is a screenshot of the game. 
+Note that rendering images or animations in Google Colab notebook is extremely hard and prone to errors, I went through tedious process of installing dependencies
+And it still didn't work. 
+However, we are saved by the power of mathematics. No problem if we csn't see our Rl agent via animation , we can simply track the behaviour of the RL agent
+via the values output by env.step()
+
+In each time step, we track changes in the values printed by env.step(action)
+let's take mountain car as example:
+observation value: state of car, in form of array of values, consists of position and velocity of car.
+reward: floating point number indicating reward received in current time step
+done: boolean indicating whether episode is over or not
+info: dictionary that keeps diagonistic information about the environment.
 
 
